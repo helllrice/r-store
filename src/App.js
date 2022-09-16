@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Routes, Route } from 'react-router-dom'
+import { Layout } from './components/Layout'
+import { Auth } from './components/Auth/Auth'
+import { useEffect, useState } from 'react'
 
-function App() {
+export const App = () => {
+    const [isLogedin, setIsLogedin] = useState(false)
+
+    useEffect(() => {
+        if (localStorage) {
+            const value = JSON.parse(localStorage.getItem('isLogedin'))
+            setIsLogedin(value)
+        }
+    }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+      <div className="container">
+        <Routes>
+            { isLogedin ? <Route path='/' element={<Layout />} exact/> :
+                <Route path='/auth' element={<Auth />} exact/> }
+                <Route path="*" element={<Auth />} />
+        </Routes>
 
-export default App;
+      </div>
+  )
+}

@@ -1,0 +1,51 @@
+.headphones {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.headphones-item {
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    width: 350px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 20px;
+}
+
+.headphones-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headphones-info p:nth-child(2) {
+    color: #FFA542;
+}
+
+.wireless {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.wireless-item {
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    width: 360px;
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 40px;
+}
+
+.wireless-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wireless-info p:nth-child(2) {
+    color: #FFA542;
+    padding-left: 10px;
+}
+

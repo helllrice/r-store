@@ -1,26 +1,22 @@
-.headphones {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.headphones-item {
+.detailed-card-item {
     padding: 40px;
     text-align: center;
     align-items: center;
     width: 350px;
     background-color: #fff;
     border-radius: 30px;
-    margin: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
 
-.headphones-info {
+.detailed-card-info {
     display: flex;
     justify-content: space-between;
 }
 
-.headphones-info p:nth-child(2) {
-    color: #FFA542;
+.detailed-card-info p:nth-child(2) {
+    color: #ffa542;
 }
 
 .wireless {
@@ -37,6 +33,7 @@
     background-color: #fff;
     border-radius: 30px;
     margin: 40px;
+    cursor: pointer;
 }
 
 .wireless-info {
@@ -45,7 +42,6 @@
 }
 
 .wireless-info p:nth-child(2) {
-    color: #FFA542;
+    color: #ffa542;
     padding-left: 10px;
 }
-

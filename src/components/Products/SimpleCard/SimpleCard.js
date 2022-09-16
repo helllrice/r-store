@@ -1,30 +1,14 @@
 import './SimpleCard.css'
-import Accessories from '../../../accessories.json'
 
-export const SimpleCard = () => {
+export const SimpleCard = ({ item }) => {
     return (
         <div>
-            { Accessories && Accessories.map((item, index) => {
-                return (
-                    <div key={index} className="accessories">
-                        <h2 className="cases-title">Чехлы</h2>
-                        <div className="cases" key={index}>
-                            {
-                                item.cases.map( cases => {
-                                        return (
-                                            <div className="cases-item" key={ cases.id }>
-                                                <img src={ cases.url } alt="img"/>
-                                                <p>{ cases.title }</p>
-                                            </div>
-                                        )
-                                    }
-                                )
-                            }
-                        </div>
+            <div className="simple-card">
+                <div className="simple-card-item">
+                    <img src={item.url} alt="img" />
+                    <p>{item.title}</p>
                 </div>
-
-                )
-            })}
+            </div>
         </div>
-            )
-}
+    );
+};

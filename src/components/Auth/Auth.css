@@ -28,13 +28,19 @@ input {
     margin: 20px 40px;
 }
 
-.auth-btn:not(:disabled) {
-    cursor: pointer!important;
+.auth-btn {
+    background-color: #3799c3;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    cursor: pointer;
 }
 
+.auth-btn:not(:disabled) {
+    cursor: pointer !important;
+}
 
 .auth-btn:disabled {
     background-color: #838383;
     cursor: default;
 }
-

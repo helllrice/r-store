@@ -1,26 +1,11 @@
-.accessories {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.cases {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 20px 40px;
-}
-
-.cases-title {
-    padding-top: 40px;
-    font-size: 30px;
-    color: #838383;
-}
-
-.cases-item {
+.simple-card-item {
+    width: 350px;
+    height: 407px;
     padding: 60px;
-    margin: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
     background-color: #fff;
     border-radius: 30px;
     text-align: center;
+    cursor: pointer;
 }

@@ -1,27 +1,29 @@
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { useEffect, useState } from 'react'
 import { Layout } from './components/Layout'
 import { Auth } from './components/Auth/Auth'
-import { useEffect, useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 
 export const App = () => {
-    const [isLogedin, setIsLogedin] = useState(false)
+    const [isLogedin, setIsLogedin] = useState(false);
 
     useEffect(() => {
         if (localStorage) {
-            const value = JSON.parse(localStorage.getItem('isLogedin'))
-            setIsLogedin(value)
+            const value = JSON.parse(localStorage.getItem("isLogedin"));
+            setIsLogedin(value);
         }
-    }, [])
+    }, []);
 
-  return (
-      <div className="container">
-        <Routes>
-            { isLogedin ? <Route path='/' element={<Layout />} exact/> :
-                <Route path='/auth' element={<Auth />} exact/> }
+    return (
+        <div className="container">
+            <Routes>
+                {isLogedin ? (
+                    <Route path="/" element={<Layout />} exact />
+                ) : (
+                    <Route path="/auth" element={<Auth />} exact />
+                )}
                 <Route path="*" element={<Auth />} />
-        </Routes>
-
-      </div>
-  )
-}
+            </Routes>
+        </div>
+    );
+};
